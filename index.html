@@ -251,6 +251,26 @@
       border-top-color: var(--navy-dark);
     }
 
+    @media (hover: none), (max-width: 600px) {
+      .chapter-popover {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: none;
+        color: var(--text-light);
+        font-size: 13px;
+        padding: 8px 0 0;
+        border-radius: 0;
+        box-shadow: none;
+        transition: none;
+      }
+
+      .chapter-popover::after {
+        display: none;
+      }
+    }
+
     /* ── WHO IT'S FOR ── */
     .audience {
       background: var(--navy);
