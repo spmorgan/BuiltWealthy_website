@@ -197,6 +197,14 @@
       border-radius: 8px;
       padding: 20px 24px;
       border-left: 3px solid var(--gold);
+      position: relative;
+      cursor: default;
+    }
+
+    .chapter-card:hover .chapter-popover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
 
     .chapter-num {
@@ -212,6 +220,35 @@
       font-size: 16px;
       font-weight: 600;
       color: var(--navy);
+    }
+
+    .chapter-popover {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 0;
+      right: 0;
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.9);
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 14px 16px;
+      border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(6px);
+      transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .chapter-popover::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 24px;
+      border: 6px solid transparent;
+      border-top-color: var(--navy-dark);
     }
 
     /* ── WHO IT'S FOR ── */
@@ -419,46 +456,57 @@
         <div class="chapter-card">
           <div class="chapter-num">Chapter 1</div>
           <div class="chapter-name">The Tradesperson's Money Problem</div>
+          <div class="chapter-popover">Why skilled tradespeople — despite high earnings — retire broke at alarming rates. The structural reasons variable income, no HR department, and physical work create a unique financial situation that generic advice ignores.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 2</div>
           <div class="chapter-name">Your Money System</div>
+          <div class="chapter-popover">How to set up a simple account structure and budget that actually works with irregular income. Covers the "pay yourself a salary" method, cash flow smoothing across slow and busy seasons, and knowing your real monthly number.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 3</div>
           <div class="chapter-name">The Tax Game Nobody Taught You</div>
+          <div class="chapter-popover">Self-employment tax, quarterly estimated payments, and the deductions most tradespeople never claim — tools, vehicle, home office, health insurance premiums, and more. Stop overpaying the IRS.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 4</div>
           <div class="chapter-name">The Benefits Gap</div>
+          <div class="chapter-popover">What you lose when there's no employer behind you — health insurance, disability coverage, life insurance — and how to replace it without overpaying. Includes what to actually look for in a policy and what to skip.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 5</div>
           <div class="chapter-name">Retirement Accounts for the Self-Employed</div>
+          <div class="chapter-popover">Solo 401(k), SEP-IRA, and SIMPLE IRA — explained plainly. Which one fits your situation, how much you can contribute, and how to actually open one without needing a financial advisor to translate.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 6</div>
           <div class="chapter-name">Going Independent</div>
+          <div class="chapter-popover">The financial and legal foundation for working for yourself: business structure (sole prop vs. LLC vs. S-corp), separating business and personal money, writing contracts, and pricing your work to cover every real cost.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 7</div>
           <div class="chapter-name">When the Work Dries Up</div>
+          <div class="chapter-popover">How to size an emergency fund for trades income — not the generic "3 months" advice. Managing cash flow in off-seasons, avoiding debt spirals, and building the reserves that keep a slow month from becoming a crisis.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 8</div>
           <div class="chapter-name">Good Years and How to Use Them</div>
+          <div class="chapter-popover">What to do when the money is really flowing: max retirement contributions, eliminate high-interest debt, build reserves, and invest — in the right order. How not to let a great year evaporate without building anything permanent.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 9</div>
           <div class="chapter-name">The Body Problem</div>
+          <div class="chapter-popover">Physical work has a different relationship with time than desk work. This chapter covers disability planning, transitioning to less physical roles, and building a financial plan that acknowledges you may not be able to do this work at 65 — or 55.</div>
         </div>
         <div class="chapter-card">
           <div class="chapter-num">Chapter 10</div>
           <div class="chapter-name">Charge What You're Worth</div>
+          <div class="chapter-popover">How to calculate your true hourly cost, set rates that actually cover overhead and profit, and stop the habit of underbidding. Includes how to handle pushback on price without caving — and why raising your rates is a financial necessity, not greed.</div>
         </div>
         <div class="chapter-card" style="grid-column: 1 / -1;">
           <div class="chapter-num">Chapter 11</div>
           <div class="chapter-name">Your 90-Day Action Plan</div>
+          <div class="chapter-popover">A week-by-week action checklist that pulls everything together. By the end of 90 days you'll have a money system, a tax strategy, the right insurance, a retirement account, and a clear picture of where you stand and where you're going.</div>
         </div>
       </div>
     </div>
