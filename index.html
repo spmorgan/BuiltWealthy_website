@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Built Wealthy — The Skilled Tradesperson's Complete Guide to Financial Independence</title>
+  <meta name="description" content="A practical, plain-language financial guide written specifically for electricians, plumbers, HVAC techs, welders, carpenters, and contractors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #1A3258;
+      --navy-dark: #0F1F38;
+      --gold: #C5A55A;
+      --gold-light: #D4B76A;
+      --cream: #FAFAF7;
+      --text: #2A2A2A;
+      --text-light: #5A5A5A;
+      --white: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(170deg, var(--navy-dark) 0%, var(--navy) 60%, #243D5E 100%);
+      color: var(--white);
+      padding: 80px 24px 100px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-inner {
+        flex-direction: row;
+        text-align: left;
+        gap: 64px;
+      }
+    }
+
+    .hero-cover {
+      flex-shrink: 0;
+    }
+
+    .hero-cover img {
+      width: 260px;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .hero-text {
+      max-width: 520px;
+    }
+
+    .hero-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .hero-trades {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 32px;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .hero-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* ── SECTION BASE ── */
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .section-text {
+      font-size: 17px;
+      color: var(--text-light);
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    /* ── ABOUT THE BOOK ── */
+    .about {
+      background: var(--cream);
+    }
+
+    .pullquote {
+      border-left: 3px solid var(--gold);
+      padding-left: 24px;
+      margin: 32px 0;
+      font-size: 19px;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── CHAPTERS ── */
+    .chapters {
+      background: var(--white);
+    }
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    @media (min-width: 600px) {
+      .chapter-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .chapter-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 20px 24px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .chapter-num {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .chapter-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* ── WHO IT'S FOR ── */
+    .audience {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .audience .section-title {
+      color: var(--white);
+    }
+
+    .audience .section-text {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .audience-list {
+      list-style: none;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .audience-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+    }
+
+    .audience-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--navy-dark);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* ── AUTHOR ── */
+    .author {
+      background: var(--cream);
+    }
+
+    /* ── EMAIL SIGNUP ── */
+    .signup {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .signup .section-inner {
+      max-width: 560px;
+    }
+
+    .signup-form {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 240px;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-family: inherit;
+      border: 2px solid #DDD;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .signup-form input[type="email"]:focus {
+      border-color: var(--gold);
+    }
+
+    .signup-form button {
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .signup-form button:hover {
+      background: var(--navy-dark);
+    }
+
+    .signup-note {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 12px;
+    }
+
+    /* ── BUY CTA ── */
+    .buy {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .buy .section-title {
+      color: var(--white);
+    }
+
+    .buy-text {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .buy-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 18px;
+      font-weight: 700;
+      padding: 18px 48px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .buy-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 14px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 60px 20px 80px; }
+      .hero-title { font-size: 36px; }
+      .hero-subtitle { font-size: 17px; }
+      .section-title { font-size: 28px; }
+      .hero-cover img { width: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-cover">
+        <img src="cover.png" alt="Built Wealthy book cover" width="260" height="416">
+      </div>
+      <div class="hero-text">
+        <div class="hero-label">Personal Finance</div>
+        <h1 class="hero-title">Built <span>Wealthy</span></h1>
+        <p class="hero-subtitle">The Skilled Tradesperson's Complete Guide to Financial Independence</p>
+        <p class="hero-trades">Electricians &bull; Plumbers &bull; HVAC &bull; Welders &bull; Carpenters &bull; Contractors</p>
+        <a href="#buy" class="hero-cta">Get the Book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE BOOK -->
+  <section class="about">
+    <div class="section-inner">
+      <div class="section-label">About the Book</div>
+      <h2 class="section-title">The financial playbook that was never written for you.</h2>
+      <p class="section-text">The skilled trades produce some of the best-paid workers in America&mdash;and those workers retire broke at rates that would embarrass a much lower-income profession. Not because they didn't earn enough. Not because they didn't work hard. But because every piece of financial advice ever written was built for someone with a steady salary and an HR department.</p>
+      <div class="pullquote">You have spent your career solving hard problems with your hands. You deserve a financial guide that treats you with the same seriousness you bring to your work.</div>
+      <p class="section-text"><em>Built Wealthy</em> is a practical, plain-language financial guide that covers everything the generic books skip: how to budget when your income isn't predictable, how to handle taxes when you're self-employed, which retirement accounts actually make sense, how to navigate insurance with no employer behind you, and how to build a financial life that accounts for the reality that physical work has a different relationship with time than desk work does.</p>
+      <p class="section-text">This isn't a get-rich-quick book. It's a step-by-step financial system that works for the way you earn money and live your life.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTERS -->
+  <section class="chapters">
+    <div class="section-inner">
+      <div class="section-label">What's Inside</div>
+      <h2 class="section-title">11 chapters. One 90-day action plan.</h2>
+      <p class="section-text">Every chapter is built around the real financial decisions tradespeople face&mdash;not theory, not jargon, not advice designed for someone else's life.</p>
+      <div class="chapter-grid">
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 1</div>
+          <div class="chapter-name">The Tradesperson's Money Problem</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 2</div>
+          <div class="chapter-name">Your Money System</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 3</div>
+          <div class="chapter-name">The Tax Game Nobody Taught You</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 4</div>
+          <div class="chapter-name">The Benefits Gap</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 5</div>
+          <div class="chapter-name">Retirement Accounts for the Self-Employed</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 6</div>
+          <div class="chapter-name">Going Independent</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 7</div>
+          <div class="chapter-name">When the Work Dries Up</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 8</div>
+          <div class="chapter-name">Good Years and How to Use Them</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 9</div>
+          <div class="chapter-name">The Body Problem</div>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 10</div>
+          <div class="chapter-name">Charge What You're Worth</div>
+        </div>
+        <div class="chapter-card" style="grid-column: 1 / -1;">
+          <div class="chapter-num">Chapter 11</div>
+          <div class="chapter-name">Your 90-Day Action Plan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="audience">
+    <div class="section-inner">
+      <div class="section-label">Who This Book Is For</div>
+      <h2 class="section-title">Whether you're 24 or 51, there's a path.</h2>
+      <p class="section-text">If any of these sound like you, this book was written for your situation.</p>
+      <ul class="audience-list">
+        <li class="audience-item">
+          <div class="audience-icon">&check;</div>
+          <div>You're self-employed or thinking about going independent, and no one ever explained the financial side of working for yourself.</div>
+        </li>
+        <li class="audience-item">
+          <div class="audience-icon">&check;</div>
+          <div>You make good money but can't figure out where it goes&mdash;especially in the slow months.</div>
+        </li>
+        <li class="audience-item">
+          <div class="audience-icon">&check;</div>
+          <div>You've never set up a retirement account, or you started one and stopped contributing.</div>
+        </li>
+        <li class="audience-item">
+          <div class="audience-icon">&check;</div>
+          <div>You're paying too much in taxes because no one showed you the deductions that apply to your trade.</div>
+        </li>
+        <li class="audience-item">
+          <div class="audience-icon">&check;</div>
+          <div>Your body is telling you the clock is running, and you need a plan that accounts for that.</div>
+        </li>
+        <li class="audience-item">
+          <div class="audience-icon">&check;</div>
+          <div>You want to retire with dignity, on your own terms, before your body makes the decision for you.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT THE AUTHOR -->
+  <section class="author">
+    <div class="section-inner">
+      <div class="section-label">About the Author</div>
+      <h2 class="section-title">Dustin Rhodes</h2>
+      <p class="section-text">Dustin has been self-employed in the contracting trades for over two decades. He learned the financial side of working for himself the way most people do: by getting it wrong first and figuring it out later&mdash;losing years he can't recover to things he didn't know to ask about.</p>
+      <p class="section-text">He didn't know he was paying both sides of Social Security until the tax bill arrived. He didn't know what health insurance actually cost until he saw his first monthly premium. He priced his work too low for longer than he should have. He ran everything through one checking account and convinced himself he understood where the money was going.</p>
+      <p class="section-text"><em>Built Wealthy</em> is the book he wishes had existed when he started.</p>
+    </div>
+  </section>
+
+  <!-- EMAIL SIGNUP -->
+  <section class="signup">
+    <div class="section-inner">
+      <div class="section-label">Stay Connected</div>
+      <h2 class="section-title">Get free resources and updates</h2>
+      <p class="section-text">Sign up for practical financial tips written for people who work with their hands&mdash;no jargon, no fluff.</p>
+      <!-- Replace action URL with your email service provider's form endpoint -->
+      <form name="contact" class="signup-form" action="#" method="POST" netlify>
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p class="signup-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- BUY CTA -->
+  <section class="buy" id="buy">
+    <div class="section-inner">
+      <h2 class="section-title">Ready to build something that lasts?</h2>
+      <p class="buy-text">Available now in paperback and Kindle.</p>
+      <!-- Replace # with your Amazon/KDP link -->
+      <a href="#" class="buy-cta">Buy on Amazon</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Dustin Rhodes. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
